@@ -41,6 +41,18 @@
   color: #888;
 }
 
+.container__logo {
+  display: flex;
+  margin: 1.5rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.main__logo {
+  border-bottom: 1px solid gray;
+
+}
+
 .header__links-navbar {
 
 }

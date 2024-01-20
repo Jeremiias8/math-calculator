@@ -9,10 +9,15 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='container__logo'>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
+
+        <span className="main__logo">
+          <h1>JF Calculator</h1>
+        </span>
+
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
