@@ -41,6 +41,9 @@ function App() {
         <button className='header__links-content'>
           <a href="/division">/</a>
         </button>
+        <button className='header__links-content'>
+          <a href="/square">Square Root</a>
+        </button>
 
       </header>
 

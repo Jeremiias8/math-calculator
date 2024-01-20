@@ -88,6 +88,11 @@ input[type="number"] {
   padding: 0.7rem;
 }
 
+.btn__reset {
+  background-color: #ff6347;
+  margin: 1rem;
+}
+
 .result {
   font-weight: 700;
   font-size: 2rem;

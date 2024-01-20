@@ -1,24 +1,28 @@
 import React, { useState } from 'react'
-import '../App.css'
 
-export const Rest = () => {
+export const SquareRoot = () => {
 
   const [numberone, setNumberOne] = useState("");
   const [numbertwo, setNumberTwo] = useState("");
   const [result, setResult] = useState("");
 
-  const restFunction = () => {
+  const squareFunction = () => {
 
-    let result = Number(numberone) - Number(numbertwo);
-    console.log(result);
-    setResult(result);
+    if (numberone == numbertwo) {
+
+      let result = Number(numberone) * Number(numbertwo);
+
+      console.log(result);
+      setResult(result);
+    } else {
+      console.log("Los valores introducidos no coinciden para ejecutarse la raíz cuadrada.");
+    }
   }
 
   const cleanData = () => {
 
     setNumberOne("");
     setNumberTwo("");
-    alert("Los inputs de resta were cleaned correctly.");
   }
 
   return (
@@ -32,9 +36,9 @@ export const Rest = () => {
       />
       <button
         type='submit'
-        onClick={restFunction}
+        onClick={squareFunction}
       >
-        Rest both numbers
+        Execute both numbers
       </button>
       <button
         type='reset'
@@ -45,9 +49,9 @@ export const Rest = () => {
       </button>
 
       <div className="result">
-        <strong>The rest is:</strong> {result}
+        <strong>The square root is:</strong> {result}
       </div>
     </div>
   )
-  
+
 }

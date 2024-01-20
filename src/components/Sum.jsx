@@ -3,33 +3,32 @@ import '../App.css'
 
 export const Sum = () => {
 
-  const [numberone, setNumberOne] = useState(0);
-  const [numbertwo, setNumberTwo] = useState(0);
-  const [result, setResult] = useState(0);
+  const [numberone, setNumberOne] = useState("");
+  const [numbertwo, setNumberTwo] = useState("");
+  const [result, setResult] = useState("");
 
-  const sumFunction = (e) => {
+  const sumFunction = () => {
 
-    let target = e.target;
-    let valueInputOne = target.number1.value;
-    let valueInputTwo = target.number2.value;
+    let result = Number(numberone) + Number(numbertwo);
+    console.log(result);
+    setResult(result);
+  }
 
-    setNumberOne(valueInputOne);
-    setNumberTwo(valueInputTwo);
+  const cleanData = () => {
 
-    let operation = valueInputOne + valueInputTwo;
-    setResult(operation);
-
-    console.log(setResult);
+    setNumberOne("");
+    setNumberTwo("");
+    alert("Los inputs de suma were cleaned correctly.");
   }
 
   return (
     <div className='input__container'>
 
-      <input type="number" id='number1' 
-        onChange={e => console.log(e.target.value)} 
+      <input type="number" value={numberone}
+        onChange={e => setNumberOne(e.target.value)} 
       />
-      <input type="number" id='number2' 
-        onChange={e => console.log(e.target.value)} 
+      <input type="number" value={numbertwo} 
+        onChange={e => setNumberTwo(e.target.value)} 
       />
       <button
         type='submit'
@@ -37,9 +36,16 @@ export const Sum = () => {
       >
         Sum both numbers
       </button>
+      <button
+        type='reset'
+        onClick={cleanData}
+        className='btn__reset'
+      >
+        Reset
+      </button>
 
       <div className="result">
-        <strong>The sum is:</strong> {numberone + numbertwo}
+        <strong>The sum is:</strong> {result}
       </div>
     </div>
   )
