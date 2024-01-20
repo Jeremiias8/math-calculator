@@ -7,6 +7,7 @@ import { Rest } from '../components/Rest'
 import { Multiplication } from '../components/Multiplication'
 import { Div } from '../components/Div'
 import { SquareRoot } from '../components/SquareRoot'
+import { Power } from '../components/Power'
 
 export const Routing = () => {
 
@@ -19,7 +20,8 @@ export const Routing = () => {
               <Route path="/rest" element={<Rest />}/>
               <Route path="/multiplication" element={<Multiplication />}/>
               <Route path="/division" element={<Div />}/>
-              <Route path="/square" element={<SquareRoot />} />        
+              <Route path="/square" element={<SquareRoot />} />
+              <Route path="/power" element={<Power />} />        
 
             </Routes>
         </BrowserRouter>

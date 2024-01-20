@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Routing } from './routing/Routing'
+import { Buttons } from './components/Btn/Buttons'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,21 +30,7 @@ function App() {
           <a href="/">Home</a>
         </button>
 
-        <button className='header__links-content'>
-          <a href="/sum">+</a>
-        </button>
-        <button className='header__links-content'>
-          <a href="/rest">-</a>
-        </button>
-        <button className='header__links-content'>
-          <a href="/multiplication">*</a>
-        </button>
-        <button className='header__links-content'>
-          <a href="/division">/</a>
-        </button>
-        <button className='header__links-content'>
-          <a href="/square">Square Root</a>
-        </button>
+        <Buttons />
 
       </header>
 
